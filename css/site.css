@@ -124,3 +124,55 @@ em{font-family:var(--sf);font-style:italic;font-weight:400;letter-spacing:-.01em
  .sl-i{grid-template-columns:1fr;gap:18px}.sl-c{position:static;margin-top:18px}.sl{min-height:0}
  .rod-top{display:block}.rod-top .bt{margin-top:24px}.rod .cols{grid-template-columns:1fr 1fr}
 }
+
+/* ===== cor e elementos (pedido do Lindson 04/11: "elementos, cores impactantes, mistura de cores, não quero mais do mesmo") ===== */
+:root{--vi:#2B070D;--bo2:#8E1F2E;--ou:#C9A46A;--ou2:#E8CFA0;--ro:#EBC9C3;--ro2:#F6E4DF;--nu:#F2E6DC}
+/* herói: manchas de cor atrás dela */
+.mancha{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75;z-index:0;animation:flutua 14s ease-in-out infinite alternate}
+.m1{width:52vw;height:52vw;right:-6vw;top:-14vw;background:radial-gradient(circle,#E9B9B3,rgba(233,185,179,0) 70%)}
+.m2{width:40vw;height:40vw;right:22vw;bottom:-18vw;background:radial-gradient(circle,#C9A46A,rgba(201,164,106,0) 70%);opacity:.55;animation-delay:-6s}
+@keyframes flutua{to{transform:translate(-3vw,2vw) scale(1.08)}}
+.heroi picture{z-index:1}.heroi .h-img{mix-blend-mode:multiply}.h-in{z-index:2}
+.heroi{background:linear-gradient(135deg,#F6E4DF 0%,#EFE9E4 45%,#E9E4DF 100%)}
+.h-frase em{color:var(--bo)}.h-nome{background:linear-gradient(90deg,#2B070D 0%,#6B1620 55%,#8E1F2E 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* selo dourado girando */
+.selo-g{position:absolute;right:7%;top:58%;width:150px;height:150px;z-index:3;display:grid;place-items:center}
+.selo-g svg{position:absolute;inset:0;animation:gira 22s linear infinite}.selo-g text{font:600 13px var(--ss);letter-spacing:.26em;fill:var(--vi)}
+.selo-g span{width:62px;height:62px;border-radius:50%;background:var(--bo);color:var(--ou2);display:grid;place-items:center;font-size:22px;box-shadow:0 14px 30px rgba(107,22,32,.35);transition:transform .4s}.selo-g:hover span{transform:scale(1.1) rotate(90deg)}
+@keyframes gira{to{transform:rotate(360deg)}}
+/* faixa em movimento */
+.faixa{background:var(--bo);color:var(--ou2);overflow:hidden;padding:18px 0;border-top:1px solid #8E1F2E;border-bottom:1px solid #4E0E17}
+.faixa div{display:flex;gap:28px;width:max-content;animation:corre 38s linear infinite;align-items:center}.faixa span{font:400 italic 30px var(--sf);white-space:nowrap}.faixa i{font-style:normal;color:var(--ou);font-size:14px}
+@keyframes corre{to{transform:translateX(-50%)}}
+/* tratamentos em bordô escuro com detalhes dourados */
+.escuro{background:radial-gradient(90% 120% at 100% 0%,#6B1620,#2B070D 60%);color:#F6E9E3}.escuro .h2 em{color:var(--ou2)}.escuro .mut{color:#d8bfb8}
+.escuro .card{border-radius:10px;box-shadow:0 20px 40px rgba(0,0,0,.25)}.escuro .card::after{background:linear-gradient(180deg,rgba(43,7,13,0) 40%,rgba(43,7,13,.85))}
+.escuro .card-n{color:var(--ou2);font-family:var(--sf);font-style:italic;font-size:32px}.escuro .card:hover{outline:1px solid var(--ou)}
+/* pilares em rosé */
+.rose{background:linear-gradient(180deg,var(--ro2),var(--ro))}.rose .pils,.rose .pil{border-color:rgba(107,22,32,.18)}.rose .pil i{border-color:rgba(107,22,32,.3);color:var(--bo);background:rgba(255,255,255,.5)}.rose .cz{color:#B98A86}
+/* jornada com anel dourado */
+.j-anel{border-color:var(--ou);background:conic-gradient(from 0deg,rgba(201,164,106,.28) 0 25%,rgba(235,201,195,.25) 25% 50%,transparent 50% 100%)}.j-anel::before,.j-anel::after{background:rgba(201,164,106,.5)}
+.jp span{border-color:var(--ou);color:var(--bo)}.j-meio{border-color:var(--ou)}
+/* cartão da Dra. em bordô com brilho */
+.dra{background:radial-gradient(70% 90% at 80% 30%,#B23A4A 0%,#6B1620 45%,#2B070D 100%)}.dra-t h3 em{color:var(--ou2)}.selos span{border-color:rgba(232,207,160,.45);color:var(--ou2)}
+.dra::before{content:"";position:absolute;right:8%;top:10%;width:420px;height:420px;border-radius:50%;border:1px solid rgba(232,207,160,.35)}
+/* conversa: véu bordô */
+.conversa::after{background:linear-gradient(180deg,rgba(43,7,13,.85),rgba(43,7,13,.35) 35%,rgba(43,7,13,0) 60%)}.cz2{color:var(--ou2)}.tags span{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px)}
+/* "Fale dos seus objetivos" (Phenomenon) com fotos flutuando */
+.objetivos{position:relative;overflow:hidden;background:radial-gradient(80% 100% at 50% 0%,#4E0E17,#1A0408 75%);color:#F6E9E3;padding:170px 0}
+.ob-t{font:300 clamp(46px,6.4vw,104px)/.98 var(--ss);letter-spacing:-.05em;max-width:980px;margin:0 auto 30px}.ob-t em{color:var(--ou2);display:block}
+.ob-f{position:absolute;border-radius:10px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.4);animation:flutua 12s ease-in-out infinite alternate}.ob-f img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.f1{width:150px;height:150px;left:9%;top:16%}.f2{width:190px;height:250px;right:8%;top:12%;animation-delay:-3s}.f3{width:130px;height:130px;left:16%;bottom:12%;animation-delay:-6s}.f4{width:170px;height:220px;right:15%;bottom:9%;animation-delay:-9s}
+.bt.ouro{background:var(--ou);color:var(--vi)}.bt.ouro i{background:var(--vi);color:var(--ou2)}
+/* quiz em vinho com dourado */
+.quiz{background:linear-gradient(160deg,#F6E4DF,#F2E6DC)}.qz{border-color:rgba(107,22,32,.18);box-shadow:0 30px 60px rgba(107,22,32,.12)}.quiz h2 .cz{color:var(--bo)}.q-top i::after{background:var(--bo)}
+/* rodapé vinho com dourado */
+.rod{background:var(--vi)}.rod-top em{color:var(--ou2)}.marca-g{background:linear-gradient(90deg,#4E0E17,#6B1620,#4E0E17);-webkit-background-clip:text;background-clip:text;color:transparent}.rod b{color:var(--ou2)}
+/* botões: bordô no hover */
+.bt{background:var(--vi)}.bt:hover{background:var(--bo)}
+@media (max-width:960px){.selo-g{width:104px;height:104px;right:16px;top:auto;bottom:24%}.selo-g span{width:44px;height:44px}.faixa span{font-size:22px}
+ .objetivos{padding:120px 0}.f1{width:80px;height:80px;left:4%;top:6%}.f2{width:100px;height:130px;right:4%;top:4%}.f3{width:70px;height:70px;left:6%;bottom:5%}.f4{width:90px;height:120px;right:5%;bottom:4%}.m1{width:90vw;height:90vw}.m2{width:70vw;height:70vw}}
+@media (prefers-reduced-motion:reduce){.mancha,.selo-g svg,.faixa div,.ob-f{animation:none}}
+.objetivos .w{position:relative;z-index:2}.ob-t{max-width:860px;text-shadow:0 10px 40px rgba(26,4,8,.6)}
+.f1{left:5%;top:14%}.f2{right:4%;top:9%;width:170px;height:225px}.f3{left:11%;bottom:10%}.f4{right:10%;bottom:8%;width:150px;height:200px}
+.ob-f{opacity:.92}
