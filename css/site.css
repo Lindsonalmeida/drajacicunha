@@ -178,3 +178,4 @@ em{font-family:var(--sf);font-style:italic;font-weight:400;letter-spacing:-.01em
 .ob-f{opacity:.92}
 /* ajuste no celular (05/11): nome inteiro e frase sem encostar no rosto */
 @media (max-width:960px){.heroi picture{top:190px}.h-img{object-position:50% 0}.h-top{top:84px}.h-frase{font-size:24px;margin-bottom:14px}.h-nome{font-size:19.6vw;left:12px;right:auto;letter-spacing:-.06em}}
+@media (max-width:960px){.heroi picture{top:170px;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%);mask-image:linear-gradient(180deg,transparent 0,#000 14%)}.h-img{object-position:50% 0}}
