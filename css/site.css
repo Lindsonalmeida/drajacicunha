@@ -176,3 +176,5 @@ em{font-family:var(--sf);font-style:italic;font-weight:400;letter-spacing:-.01em
 .objetivos .w{position:relative;z-index:2}.ob-t{max-width:860px;text-shadow:0 10px 40px rgba(26,4,8,.6)}
 .f1{left:5%;top:14%}.f2{right:4%;top:9%;width:170px;height:225px}.f3{left:11%;bottom:10%}.f4{right:10%;bottom:8%;width:150px;height:200px}
 .ob-f{opacity:.92}
+/* ajuste no celular (05/11): nome inteiro e frase sem encostar no rosto */
+@media (max-width:960px){.heroi picture{top:190px}.h-img{object-position:50% 0}.h-top{top:84px}.h-frase{font-size:24px;margin-bottom:14px}.h-nome{font-size:19.6vw;left:12px;right:auto;letter-spacing:-.06em}}
