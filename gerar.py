@@ -179,7 +179,7 @@ corpo = f'''<section class="heroi"><div class="mancha m1"></div><div class="manc
 <div class="faixa"><div>{"".join(f"<span>{p}</span><i>✦</i>" for p in ["Harmonização orofacial", "Natural é fazer certo pra você", "Odontologia", "Avaliação antes de tudo", "Zé Doca · Maranhão"] * 3)}</div></div>
 <section class="sec marca nude" data-marca="natural"><div class="w c"><h2 class="h2c rv">A beleza começa <span class="cz">por</span> entender <span class="cz">o seu</span> rosto.</h2>{bt("Conhecer a Dra. Jaci", "#dra", "pq centro rv")}
 <div class="bel rv"><span class="anel a1"></span><span class="anel a2"></span><div class="largo"><img src="/img/v3-beleza.webp" alt="Dra. Jaci Cunha" loading="lazy" width="1800" height="1200"></div>
-<div class="bel-f b1"><img src="/img/v3-j2.webp" alt="" loading="lazy" width="400" height="400"></div><div class="bel-f b2"><img src="/img/v3-j3.webp" alt="" loading="lazy" width="400" height="400"></div>
+<div class="bel-f bf1"><img src="/img/v3-j2.webp" alt="" loading="lazy" width="400" height="400"></div><div class="bel-f bf2"><img src="/img/v3-j3.webp" alt="" loading="lazy" width="400" height="400"></div>
 <div class="bel-s s1"><b>Avaliação</b><span>antes de tudo</span></div><div class="bel-s s2"><b>{CRO}</b><span>cirurgiã-dentista</span></div></div></div></section>
 <section class="sec escuro" id="tratamentos"><div class="w"><div class="tt-cab"><h2 class="h2 rv">Tratamentos <em>para o seu</em> rosto e sorriso</h2><p class="mut rv">Harmonização orofacial e odontologia em Zé Doca. Cada tratamento é indicado na avaliação.</p></div>{cards_trat()}</div></section>
 <section class="sec rose"><div class="w"><h2 class="h2 rv" style="max-width:620px">Um cuidado pensado <span class="cz">para o que torna</span> você única.</h2><div class="pils">{pilares}</div></div></section>
@@ -200,8 +200,8 @@ open('index.html', 'w').write(doc('/', 'Harmonização Facial e Dentista em Zé 
 # bio do Instagram (mesma linguagem: foto de estúdio grande com o nome por cima, lista com seta, chat)
 botoes = [('Agendar avaliação', 'Quatro perguntas e a mensagem vai pronta', '#agendar')] + [(s['h1'], s['sub'], f'/{s["slug"]}/') for s in SERV] + [('Como chegar', 'Av. Militar, em frente à Praça do Viva', '/#como-chegar'), ('Site completo', 'Tratamentos, dúvidas e a clínica', '/')]
 bts = ''.join(f'<a class="{"b1" if i == 0 else ""}" href="{u}"><span><b>{t}</b><small>{d}</small></span><i>{SETA}</i></a>' for i, (t, d, u) in enumerate(botoes))
-corpo = f'''<section class="bio"><div class="bio-h"><img src="/img/v3-bio.webp" alt="Dra. Jaci Cunha, cirurgiã-dentista" width="1100" height="1375"><div class="bio-ht"><span class="eti claro">Cirurgiã-dentista · {CRO}</span><h1>Jaci<br>Cunha</h1></div></div>
-<div class="bio-w"><p class="bio-f">Harmonização orofacial e odontologia em Zé Doca/MA. <em>Natural é fazer certo pra você.</em></p><div class="bio-l">{bts}</div></div></section>{quiz_html()}'''
+corpo = f'''<div class="bio-pg marca" data-marca="Jaci Cunha"><span class="anel ba1"></span><span class="anel ba2"></span><section class="bio"><div class="bio-h"><img src="/img/v3-bio.webp" alt="Dra. Jaci Cunha, cirurgiã-dentista" width="1100" height="1375"><div class="bio-ht"><span class="eti claro">Cirurgiã-dentista · {CRO}</span><h1>Jaci<br>Cunha</h1></div></div>
+<div class="bio-w"><p class="bio-f">Harmonização orofacial e odontologia em Zé Doca/MA. <em>Natural é fazer certo pra você.</em></p><div class="bio-l">{bts}</div></div></section></div>{quiz_html()}'''
 os.makedirs('bio', exist_ok=True)
 open('bio/index.html', 'w').write(doc('/bio/', 'Dra. Jaci Cunha · Links | Harmonização e Odontologia em Zé Doca', 'Agende sua avaliação com a Dra. Jaci Cunha (CRO-MA 8514) em Zé Doca (MA).', corpo, [EMP], robots='noindex,follow', classe='pg-bio'))
 
