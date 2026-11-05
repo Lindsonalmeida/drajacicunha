@@ -5,7 +5,7 @@
 # Uso: python3 gerar.py
 import json, html, os, urllib.parse
 BASE = 'https://drajacicunha.pages.dev'   # nome do projeto na Cloudflare (trocar se mudar)
-WA = ''                                     # WhatsApp da clínica com DDI, ex.: 5598999999999 (PEDIR AO LINDSON). Vazio = botões vão ao direct do Instagram
+WA = '559885672646'                                     # WhatsApp da clínica com DDI, ex.: 5598999999999 (PEDIR AO LINDSON). Vazio = botões vão ao direct do Instagram
 IG = 'clinica.drajacicunha'
 CRO = 'CRO-MA 8514'
 END = 'Av. Militar, em frente à Praça do Viva · Zé Doca/MA'
